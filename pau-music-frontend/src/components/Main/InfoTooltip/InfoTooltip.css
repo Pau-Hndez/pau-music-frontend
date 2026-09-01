@@ -1,0 +1,153 @@
+.info-tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px 15px 5px;
+
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.info-tooltip__icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.info-tooltip__icon_type_success {
+  background-color: #dcefe7;
+  color: #5d927c;
+}
+
+.info-tooltip__icon_type_error {
+  background-color: #f5e1e1;
+  color: #b85c5c;
+}
+
+.info-tooltip__title {
+  margin: 0 0 10px;
+
+  color: #2f3e38;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.info-tooltip__message {
+  max-width: 330px;
+
+  margin: 0 0 25px;
+
+  color: #61716b;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.info-tooltip__button {
+  min-width: 150px;
+
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #8b6fb3;
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.info-tooltip__button:hover {
+  background-color: #765a9d;
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 768px) {
+  .info-tooltip {
+    padding: 10px 20px 5px;
+  }
+
+  .info-tooltip__icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 16px;
+    font-size: 26px;
+  }
+
+  .info-tooltip__title {
+    margin-bottom: 9px;
+    font-size: 20px;
+  }
+
+  .info-tooltip__message {
+    max-width: 300px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .info-tooltip__button {
+    min-width: 140px;
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .info-tooltip {
+    width: 100%;
+    padding: 8px 10px 3px;
+    box-sizing: border-box;
+  }
+
+  .info-tooltip__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+    font-size: 23px;
+  }
+
+  .info-tooltip__title {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .info-tooltip__message {
+    max-width: 250px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .info-tooltip__button {
+    min-width: 125px;
+    padding: 9px 16px;
+    font-size: 12px;
+    border-radius: 9px;
+  }
+}

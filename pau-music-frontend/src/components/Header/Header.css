@@ -1,0 +1,448 @@
+.header {
+  width: 100%;
+  height: 130px;
+  background-color: #fffaf0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 185px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 38px;
+  min-width: 0;
+}
+
+.header__nav-button {
+  position: relative;
+  padding: 0;
+  border: none;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  color: #2e2038;
+
+  appearance: none;
+  background: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Línea inferior de los links */
+
+.header__nav-button:not(.header__nav-button-register)::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  width: 0;
+  height: 3px;
+
+  background-color: #8c3b78;
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.header__nav-button:not(.header__nav-button-register):hover {
+  color: #8c3b78;
+}
+
+.header__nav-button:not(.header__nav-button-register):hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   BOTÓN "YA SOY ESTUDIANTE"
+   ========================================= */
+
+.header__nav-button-login {
+  color: #2e2038;
+}
+
+/* =========================================
+   BOTÓN "QUIERO INICIAR HOY"
+   ========================================= */
+
+.header__nav-button-register {
+  padding: 15px 32px;
+
+  background-color: #8c3b78;
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header__nav-button-register:hover {
+  background-color: #722e62;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(140, 59, 120, 0.25);
+}
+
+/* =========================================
+   BOTÓN CERRAR SESIÓN
+   ========================================= */
+
+.header__logout-button {
+  padding: 10px 22px;
+
+  border: 1px solid #8b6fb3;
+  border-radius: 10px;
+
+  background-color: transparent;
+  color: #8b6fb3;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.header__logout-button:hover {
+  background-color: #8b6fb3;
+  color: #ffffff;
+}
+
+/* =========================================
+   BOTÓN HAMBURGUESA
+   ========================================= */
+
+.header__menu-button {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: transparent;
+  color: #2e2038;
+
+  font-size: 27px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.header__menu-button:hover {
+  background-color: #eee5f3;
+  color: #8c3b78;
+}
+
+/* =========================================
+   TABLET - 768px
+   ========================================= */
+
+@media screen and (max-width: 1100px) {
+  .header__content {
+    padding: 0 35px;
+  }
+
+  .header__nav {
+    gap: 22px;
+  }
+
+  .header__nav-button {
+    font-size: 13px;
+  }
+
+  .header__nav-button-register {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .header__logout-button {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   TABLET PEQUEÑA - 768px
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+  }
+
+  .header__content {
+    padding: 0 30px;
+  }
+
+  .header__logo {
+    width: 145px;
+  }
+
+  .header__nav {
+    gap: 16px;
+  }
+
+  .header__nav-button {
+    font-size: 12px;
+  }
+
+  .header__nav-button-register {
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+
+  .header__logout-button {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   MÓVIL - MENÚ HAMBURGUESA
+   Se activa por debajo de 768px
+   ========================================= */
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: 80px;
+  }
+
+  .header__content {
+    padding: 0 20px;
+  }
+
+  .header__logo {
+    width: 120px;
+  }
+
+  /* Mostrar hamburguesa */
+
+  .header__menu-button {
+    display: flex;
+  }
+
+  /* Ocultar navegación inicialmente */
+
+  .header__nav {
+    position: absolute;
+
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 8px;
+
+    background-color: #fffaf0;
+
+    box-shadow: 0 8px 20px rgba(47, 24, 71, 0.1);
+  }
+
+  /* Mostrar navegación al abrir */
+
+  .header__nav_open {
+    display: flex;
+  }
+
+  /* Links del menú */
+
+  .header__nav-button {
+    width: 100%;
+
+    padding: 12px 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    border-radius: 8px;
+  }
+
+  /* Eliminamos la línea inferior */
+
+  .header__nav-button:not(.header__nav-button-register)::after {
+    display: none;
+  }
+
+  .header__nav-button:not(.header__nav-button-register):hover {
+    background-color: #eee5f3;
+    color: #8c3b78;
+  }
+
+  /* Botón principal */
+
+  .header__nav-button-register {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    font-size: 13px;
+
+    border-radius: 20px;
+  }
+
+  /* Header de StudentsPage */
+
+  .header_student .header__content {
+    justify-content: space-between;
+  }
+
+  .header__logout-button {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   MÓVIL PEQUEÑO - 480px
+   ========================================= */
+
+@media screen and (max-width: 480px) {
+  .header__content {
+    padding: 0 15px;
+  }
+
+  .header__logo {
+    width: 110px;
+  }
+
+  .header__menu-button {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .header__nav {
+    padding: 18px 15px;
+  }
+
+  .header__logout-button {
+    padding: 8px 13px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   MÓVIL - 320px
+   ========================================= */
+
+@media screen and (max-width: 320px) {
+  .header {
+    height: 75px;
+  }
+
+  .header__content {
+    padding: 0 12px;
+  }
+
+  .header__logo {
+    width: 100px;
+  }
+
+  .header__menu-button {
+    width: 38px;
+    height: 38px;
+
+    font-size: 24px;
+  }
+
+  .header__nav {
+    top: 75px;
+
+    padding: 15px 12px;
+
+    gap: 6px;
+  }
+
+  .header__nav-button {
+    padding: 11px 8px;
+    font-size: 12px;
+  }
+
+  .header__nav-button-register {
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+
+  .header__logout-button {
+    padding: 7px 11px;
+    font-size: 10px;
+    border-radius: 8px;
+  }
+}

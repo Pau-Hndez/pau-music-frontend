@@ -1,0 +1,48 @@
+@import "./../vendor/fonts.css";
+@import "./../vendor/normalize.css";
+
+@import "./components/Footer/Footer.css";
+@import "./components/Header/Header.css";
+@import "./components/Main/Home/Home.css";
+@import "./components/Main/Popup/Popup.css";
+@import "./components/Main/ReviewCard/ReviewCard.css";
+@import "./components/Main/Testimonials/Testimonials.css";
+@import "./components/Main/StudentsPage/StudentsPage.css";
+@import "./components/Main/InfoTooltip/InfoTooltip.css";
+@import "./components/Main/Preloader/Preloader.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+section {
+  width: 100%;
+}

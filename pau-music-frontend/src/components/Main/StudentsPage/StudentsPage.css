@@ -1,0 +1,491 @@
+.students-page {
+  min-height: 100vh;
+  padding: 150px 8% 80px;
+
+  background-color: #f8fbf9;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.students-page__welcome {
+  max-width: 800px;
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.students-page__eyebrow {
+  margin: 0 0 8px;
+
+  color: #8b6fb3;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.students-page__title {
+  margin: 0 0 15px;
+
+  color: #2f3e38;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.students-page__description {
+  margin: 0;
+
+  color: #61716b;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.students-page__module {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background-color: #eef7f3;
+}
+
+.students-page__module-number {
+  margin: 0 0 8px;
+
+  color: #8b6fb3;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.students-page__module-title {
+  margin: 0 0 20px;
+
+  color: #2f3e38;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+.students-page__topics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  color: #61716b;
+
+  font-size: 14px;
+}
+
+.students-page__music {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.students-page__section-title {
+  margin: 0 0 8px;
+
+  color: #2f3e38;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+}
+
+.students-page__section-description {
+  margin: 0 0 25px;
+
+  color: #61716b;
+}
+
+.students-page__search {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 35px;
+}
+
+.students-page__search-input {
+  flex: 1;
+
+  padding: 14px 18px;
+
+  border: 1px solid #d5e1dc;
+  border-radius: 10px;
+
+  background-color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.students-page__search-input:focus {
+  border-color: #8b6fb3;
+}
+
+.students-page__search-button {
+  padding: 14px 25px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #8b6fb3;
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.students-page__search-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.students-page__error {
+  margin-bottom: 25px;
+
+  color: #b85c5c;
+
+  font-size: 14px;
+}
+
+.students-page__videos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.video-card {
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 5px 20px rgba(47, 62, 56, 0.08);
+}
+
+.video-card__link {
+  display: block;
+}
+
+.video-card__image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+}
+
+.video-card__content {
+  padding: 18px;
+}
+
+.video-card__title {
+  display: -webkit-box;
+  overflow: hidden;
+
+  margin: 0 0 8px;
+
+  color: #2f3e38;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.video-card__channel {
+  margin: 0 0 15px;
+
+  color: #8a9892;
+
+  font-size: 12px;
+}
+
+.video-card__save {
+  padding: 8px 13px;
+
+  border: 1px solid #d8cde6;
+  border-radius: 8px;
+
+  background-color: transparent;
+  color: #8b6fb3;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.video-card__save:hover {
+  background-color: #f3eef8;
+}
+
+.video-card__save_active {
+  background-color: #f3eef8;
+  color: #8b6fb3;
+}
+.students-page__favorites {
+  max-width: 1100px;
+  margin: 70px auto 0;
+  padding-top: 50px;
+
+  border-top: 1px solid #dce8e3;
+}
+
+.students-page__empty {
+  margin: 25px 0 0;
+  padding: 25px;
+
+  border-radius: 12px;
+
+  background-color: #eef7f3;
+  color: #61716b;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .students-page {
+    padding: 120px 5% 60px;
+  }
+
+  .students-page__welcome {
+    margin-bottom: 40px;
+  }
+
+  .students-page__eyebrow {
+    font-size: 16px;
+  }
+
+  .students-page__title {
+    margin-bottom: 12px;
+    font-size: 30px;
+  }
+
+  .students-page__description {
+    font-size: 14px;
+  }
+
+  .students-page__module {
+    margin-bottom: 50px;
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .students-page__module-number {
+    font-size: 13px;
+  }
+
+  .students-page__module-title {
+    margin-bottom: 18px;
+    font-size: 22px;
+  }
+
+  .students-page__topics {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .students-page__section-title {
+    font-size: 23px;
+  }
+
+  .students-page__section-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .students-page__search {
+    margin-bottom: 30px;
+  }
+
+  .students-page__search-input {
+    padding: 13px 15px;
+    font-size: 13px;
+  }
+
+  .students-page__search-button {
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+
+  .students-page__videos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .video-card__content {
+    padding: 15px;
+  }
+
+  .video-card__title {
+    font-size: 14px;
+  }
+
+  .video-card__channel {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+
+  .video-card__save {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+
+  .students-page__favorites {
+    margin-top: 55px;
+    padding-top: 40px;
+  }
+
+  .students-page__empty {
+    padding: 20px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .students-page {
+    padding: 100px 20px 50px;
+  }
+
+  .students-page__welcome {
+    margin-bottom: 30px;
+  }
+
+  .students-page__eyebrow {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .students-page__title {
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  .students-page__description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .students-page__module {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .students-page__module-number {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .students-page__module-title {
+    margin-bottom: 16px;
+    font-size: 19px;
+    line-height: 1.25;
+  }
+
+  .students-page__topics {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .students-page__section-title {
+    margin-bottom: 7px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .students-page__section-description {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .students-page__search {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .students-page__search-input {
+    width: 100%;
+    padding: 11px 13px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .students-page__search-button {
+    width: 100%;
+    padding: 11px 15px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+
+  .students-page__error {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .students-page__videos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .video-card {
+    border-radius: 12px;
+  }
+
+  .video-card__content {
+    padding: 14px;
+  }
+
+  .video-card__title {
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .video-card__channel {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .video-card__save {
+    padding: 7px 10px;
+    font-size: 11px;
+    border-radius: 7px;
+  }
+
+  .students-page__favorites {
+    margin-top: 45px;
+    padding-top: 35px;
+  }
+
+  .students-page__empty {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
