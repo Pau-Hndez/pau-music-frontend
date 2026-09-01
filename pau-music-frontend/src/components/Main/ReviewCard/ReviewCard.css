@@ -22,12 +22,12 @@
 }
 
 .review-card__image {
+  display: block;
   width: 90px;
   height: 90px;
-
+  margin: 0 auto;
   object-fit: cover;
   border-radius: 50%;
-
   border: 3px solid #b7ddd8;
 }
 
