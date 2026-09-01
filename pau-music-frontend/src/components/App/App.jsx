@@ -92,7 +92,7 @@ function App() {
       children: (
         <InfoTooltip
           isSuccess={true}
-          message="Tu cuenta ha sido creada correctamente. Ahora puedes iniciar sesión."
+          message="Tu cuenta ha sido creada correctamente. ¡Ahora puedes iniciar sesión!"
           onClose={showLoginPopup}
         />
       ),
